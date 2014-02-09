@@ -12,11 +12,9 @@ For example `Asset::scripts('frontend')` would result in `<script scr="public/js
 
 ## Installation
 
-Add `"modbase/asset-manager": "dev-master"` to your `composer.json` file.
-
-Run `composer update`
-
-Add `'Modbase\AssetManager\AssetManagerServiceProvider'` to your service providers in `app/config/app.php`.
+1. Add `"modbase/asset-manager": "0.1.*"` to your `composer.json` file.
+2. Run `composer update`
+3. Add `'Modbase\AssetManager\AssetManagerServiceProvider'` to your service providers in `app/config/app.php`.
 
 ## Example gulpfile.js
 
@@ -88,5 +86,5 @@ The arguments of the `styles()` and `scripts()` methods correspond to the `bundl
 1. Use the above example *gulpfile.js* and update whatever you want, but be careful with the bundleName option!
 2. In your master.blade.php (assuming you're using the awesome Blade template engine and have a master layout) add `{{ Asset::styles('frontend') }}` to your head section. Add `{{ Asset::scripts('frontend') }}` at the bottom of your HTML (you should put your JavaScript at the bottom, just before the closing body tag to speed up loading).
 3. Add your assets to `app/assets/css` and `app/assets/js` (according to the *gulpfile.js* paths).
-4. Run `gulp` or `gulp css` or `gulp js`.
+4. Run `gulp` or `gulp css` or `gulp js` everytime you update your assets (or simply use a gulp watch).
 5. Enjoy!
