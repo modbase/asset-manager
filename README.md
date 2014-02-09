@@ -12,7 +12,7 @@ For example `Asset::scripts('frontend')` would result in `<script scr="public/js
 
 ## Example gulpfile.js
 
-```
+```javascript
 var gulp = require('gulp');
 var styl = require('gulp-styl'); 
 var uglify = require('gulp-uglify');
