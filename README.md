@@ -1,6 +1,6 @@
 # Asset Manager
 
-This is a little helper package for Laravel to use in combination with e.g. Gulp.
+This is a little helper package for [Laravel](http://laravel.com/) to use in combination with e.g. [Gulp](http://gulpjs.com).
 
 The advantage of this package is that it **automatically handles versioned assets**. With versioned assets, you can benefit from **cache busting** when an asset changes. This way your clients will always use the correct assets and not an old cached version.
 
