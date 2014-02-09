@@ -12,7 +12,9 @@ For example `Asset::scripts('frontend')` would result in `<script scr="public/js
 
 ## Installation
 
-Install the package via composer: `modbase/asset-manager`
+Add `"modbase/asset-manager": "dev-master"` to your `composer.json` file.
+
+Run `composer update`
 
 Add `'Modbase\AssetManager\AssetManagerServiceProvider'` to your service providers in `app/config/app.php`.
 
