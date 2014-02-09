@@ -2,7 +2,7 @@
 
 This is a little helper package for Laravel to use in combination with e.g. Gulp.
 
-The advantage of this package is that it automatically handles versioned assets. With versioned assets, you can benefit from cache busting when an asset changes. This way your clients will always use the correct assets and not an old cached version.
+The advantage of this package is that it **automatically handles versioned assets**. With versioned assets, you can benefit from **cache busting** when an asset changes. This way your clients will always use the correct assets and not an old cached version.
 
 For example the `gulpfile.js` below will produce a `public/css/styles-{hash}.css` and `public/js/scripts-{hash}.js` file where `{hash}` is the MD5 hash of the built file.
 
@@ -73,4 +73,12 @@ gulp.task('default', ['css', 'js']);
 
 Use this in your views: `Asset::styles('frontend')` and `Asset::scripts('frontend')`.
 
-The arguments of the `styles()` and `scripts()` methods are correspond to the `bundleName` prefix you've given in the *gulpfile.js*. In the example above, it was `frontend`. Always end the bundleName with `.scripts` or `.styles` so that the AssetManager knows what to fetch.
+The arguments of the `styles()` and `scripts()` methods correspond to the `bundleName` prefix you've given in the *gulpfile.js*. In the example above, it was `frontend`. Always end the bundleName with `.scripts` or `.styles` so that the AssetManager knows what to fetch.
+
+## Example workflow
+
+1. Use this *gulpfile.js* and update whatever you want.
+2. In your master.blade.php (assuming you're using the awesome Blade template engine and have a master layout) add `{{ Asset::styles('frontend') }}` to your head section. Add `{{ Asset::scripts('frontend') }}` at the bottom of your HTML (you should put your JavaScript at the bottom, just before the closing body tag to speed up loading).
+3. Add your assets to `app/assets/css` and `app/assets/js` (according to the *gulpfile.js* paths).
+4. Run `gulp` or `gulp css` or `gulp js`.
+5. Enjoy!
