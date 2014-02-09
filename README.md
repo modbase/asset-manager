@@ -10,6 +10,12 @@ By using the `Asset` facade, you'll be able to include these assets without havi
 
 For example `Asset::scripts('frontend')` would result in `<script scr="public/js/scripts-627d37eb.js"></script>`.
 
+## Installation
+
+Install the package via composer: `modbase/asset-manager`
+
+Add `'Modbase\AssetManager\AssetManagerServiceProvider'` to your service providers in `app/config/app.php`.
+
 ## Example gulpfile.js
 
 ```javascript
@@ -77,7 +83,7 @@ The arguments of the `styles()` and `scripts()` methods correspond to the `bundl
 
 ## Example workflow
 
-1. Use this *gulpfile.js* and update whatever you want.
+1. Use the above example *gulpfile.js* and update whatever you want, but be careful with the bundleName option!
 2. In your master.blade.php (assuming you're using the awesome Blade template engine and have a master layout) add `{{ Asset::styles('frontend') }}` to your head section. Add `{{ Asset::scripts('frontend') }}` at the bottom of your HTML (you should put your JavaScript at the bottom, just before the closing body tag to speed up loading).
 3. Add your assets to `app/assets/css` and `app/assets/js` (according to the *gulpfile.js* paths).
 4. Run `gulp` or `gulp css` or `gulp js`.
