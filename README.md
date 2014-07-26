@@ -20,18 +20,18 @@ For example `Asset::scripts('frontend')` would result in `<script scr="public/js
 
 ```javascript
 var gulp = require('gulp');
-var styl = require('gulp-styl'); 
+var styl = require('gulp-styl');
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var rev = require('gulp-rev');
 var clean = require('gulp-clean');
-var filename = require('gulp-filename');
+var filename = require('gulp-asset-manifest');
 
 // Paths to your asset files
 var paths = {
     frontend: {
         scripts: [
-            'app/assets/javascript/vendor/**/*.js', 
+            'app/assets/javascript/vendor/**/*.js',
             'app/assets/javascript/*.js'
         ],
         styles: [
