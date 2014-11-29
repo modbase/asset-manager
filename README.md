@@ -1,3 +1,5 @@
+**Note:** this project has been discontinued in favor of [Elixir](https://github.com/laravel/elixir)
+
 # Asset Manager
 
 This is a little helper package for [Laravel](http://laravel.com/) to use in combination with e.g. [Gulp](http://gulpjs.com).
